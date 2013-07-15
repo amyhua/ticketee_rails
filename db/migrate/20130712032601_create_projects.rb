@@ -7,4 +7,12 @@ class CreateProjects < ActiveRecord::Migration
       t.timestamps
     end
   end
+  
+  def up
+    remove_column :projects, :name
+  end
+  
+  def down
+    add_column :projects, :name, :string
+  end
 end
