@@ -1,5 +1,6 @@
 
 class ProjectsController < ApplicationController
+  
   def index
     @projects = Project.all
   end
@@ -7,6 +8,8 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
   end
+  
+  # how do new and create interact with each other to create a new record?
   
   def create
     @project = Project.new(params[:project])
