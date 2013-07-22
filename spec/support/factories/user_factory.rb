@@ -7,5 +7,12 @@ FactoryGirl.define do
     factory :confirmed_user do
       after_create { |user| user.confirm! }
     end
+    
+    factory :admin_user do
+      after_create do |user|
+        user.confirm!
+        user.update_attribute(:admin, true)
+      end
+    end
   end
 end
