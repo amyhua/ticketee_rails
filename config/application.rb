@@ -58,5 +58,8 @@ module Ticketee
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # For deploying to Heroku 3.1, forces app to not access DB or load models when precompiling assets
+    config.assets.initialize_on_precompile = false
   end
 end
