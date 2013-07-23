@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   def to_s
+    # applies to both links of user and user.email
     "#{email} (#{admin? ? "Admin" : "User"})"
   end
 end
