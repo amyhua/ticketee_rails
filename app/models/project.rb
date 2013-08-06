@@ -10,4 +10,10 @@ class Project < ActiveRecord::Base
     joins(:permissions).where(:permissions => { :action => "show",
                                                 :user_id => user.id })
   end
+  
+  def self.find(user)
+    user.admin? ? Project : Project.viewable_by(user)
+    
+    
+  end
 end
