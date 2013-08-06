@@ -6,6 +6,10 @@ gem 'dynamic_form', '1.1.4'
 gem 'email_spec', '1.2.1'
 gem 'sqlite3'
 
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

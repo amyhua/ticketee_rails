@@ -1,7 +1,8 @@
 require 'spec_helper'
 feature 'Creating Projects' do
   before do
-    sign_in_as!(Factory(:admin_user))
+    user = Factory(:admin_user)
+    sign_in_as!(user)
     visit '/'
     click_link 'New Project'
   end

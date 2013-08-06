@@ -6,7 +6,7 @@ feature "Viewing projects" do
   
   before do
     sign_in_as!(user)
-    define_permission!(user, :view, project)
+    define_permission!(user, :show, project)
   end
   
   scenario "Listing all projects" do
